@@ -418,6 +418,13 @@ def check_prime(n):
 	return "Not Prime"
 ```
 Q80. Write a Python program to check Armstrong Number.
+```{python}
+def check_armstrong(num):
+	sum_of_cubes = 0
+	for i in str(num):
+		sum_of_cubes += int(i)**3
+	return sum_of_cubes == num
+```
 
 Q81. Write a Python program to find the n-th Fibonacci Number.
 ```{python}
@@ -441,7 +448,18 @@ Q84. Write a Python program to find N largest element from a list.
 
 Q85. Write a Python program to find cumulative sum of a list.
 
+```{python}
+def get_cummulative(list_a):
+    return [list_a[i] + sum(list_a[0:i]) for i in range(len(list_a))]
+```
+
 Q86. Write a Python program to check if a string is palindrome or not.
+
+```{python}
+def check_palindrome(my_str):
+	reversed = my_str[::-1]
+	return my_str == reversed
+```
 
 Q87. Write a Python program to remove i'th element from a string.
 
@@ -528,7 +546,10 @@ Q99. Write a python program to print below pattern.
 1 2 3 4 
 1 2 3 4 5
 ```
-
+```{python}
+for i in range(1, 6):
+	print(*range(1, i+1))
+```
 Q100. Write a python program to print below pattern.
 ```
 A 
@@ -536,4 +557,9 @@ B B
 C C C 
 D D D D 
 E E E E E 
+```
+```{python}
+characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+for i in range(1, 6):
+	print((characters[i-1] + " ") *  i)
 ```
