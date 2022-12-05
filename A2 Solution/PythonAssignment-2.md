@@ -252,6 +252,11 @@ while i < len(divisible_by_5):
 
 Q26. What is a string? How can we declare string in Python?
 
+A26. A string is a sequence of characters. It is declared by enclosing the characters in either single quotes, double quotes as shown below:
+``` {python}
+my_str = "abcd"
+```
+
 Q27. How can we access the string using its index?
 
 A27. In a similar manner as accessing an element at an index i for a list. Say you have a string `my_str`, then ith element of that string can be accessed using `my_str[i-1]`.
@@ -261,24 +266,46 @@ Q28. Write a code to get the desired output of the following
 string = "Big Data iNeuron"
 desired_output = "iNeuron"
 ```
+A28. 
 ```{python}
 desired_output = string[-7:]
 ```
+
 Q29. Write a code to get the desired output of the following
 ```
 string = "Big Data iNeuron"
 desired_output = "norueNi"
 ```
 
+A29.
+```{python}
+"".join(string.split(" ")[-1][::-1])
+```
+
 Q30. Resverse the string given in the above question.
 
+A30.
+```{python}
+string[::-1]
+```
+
 Q31. How can you delete entire string at once?
+
+A31. One can use the `del` keyword to delete an entire string as shown below:
+
+```
+del mystr
+```
 
 Q32. What is escape sequence?
 
 Q33. How can you print the below string?
 ```
 'iNeuron's Big Data Course'
+```
+A33.  Use double quotes as opposed to single quotes
+```{python}
+print("'iNeuron's Big Data Course'")
 ```
 
 Q34. What is a list in Python?
@@ -287,8 +314,11 @@ A34. List is a data structure that allows for storing muliple values. It is basi
 
 Q35. How can you create a list in Python?
 
-A35.
+A35. Lists are created using square brackets as shown below:
 
+```
+courses = ['Data Science', 'Big Data', 'Data Analytics', 'Machine Learning']
+```
 
 Q36. How can we access the elements in a list?
 
@@ -298,6 +328,10 @@ Q37. Write a code to access the word "iNeuron" from the given list.
 ```
 lst = [1,2,3,"Hi",[45,54, "iNeuron"], "Big Data"]
 ``` 
+A37.
+```{python}
+lst[-2][-1]
+```
 
 Q38. Take a list as an input from the user and find the length of the list.
 
@@ -305,10 +339,23 @@ Q39. Add the word "Big" in the 3rd index of the given list.
 ```
 lst = ["Welcome", "to", "Data", "course"]
 ```
+A39.
+```{python}
+lst.insert(3, "Big")
+```
 
 Q40. What is a tuple? How is it different from list?
+```
+A tuple is data structure that allows for storage of multiple items. In contrast to lists, tuples are immutable.
+```
 
 Q41. How can you create a tuple in Python?
+
+A41. Tuples are created using parathesis like the one below:
+
+```
+courses = ('Data Science', 'Big Data', 'Data Analytics', 'Machine Learning')
+```
 
 Q42. Create a tuple and try to add your name in the tuple. Are you able to do it? Support your answer with reason.
 
@@ -499,7 +546,10 @@ Q92. Write a Python program to convert a list of tuples into dictionary.
 Input : [('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
 Output : {'Sachin': 10, 'MSD': 7, 'Kohli': 18, 'Rohit': 45}
 ```
-
+```{python}
+def tuple2dict(list_a):
+	return dict(list_a)
+```
 Q93. Write a Python program to create a list of tuples from given list having number and its cube in each tuple.
 ```
 Input: list = [9, 5, 6]
