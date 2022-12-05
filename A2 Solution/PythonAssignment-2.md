@@ -443,8 +443,21 @@ def interchange(list_a):
 	return list_a
 ```
 Q83. Write a Python program to swap two elements in a list.
-
+```
+def swap(list_a, x, y):
+""" x and y are the elements of list_a that are to be swaped """
+	index_1 = list_a.index(x)
+	index_2 = list_a.index(y)
+	list_a[index_1] = y
+	list_a[index_2] = x
+	return list_a
+```
 Q84. Write a Python program to find N largest element from a list.
+```{python}
+def largest_n(list_a, n):
+    list_b = sorted(list_a)[::-1]
+    return list_b[n-1]
+```
 
 Q85. Write a Python program to find cumulative sum of a list.
 
@@ -462,8 +475,18 @@ def check_palindrome(my_str):
 ```
 
 Q87. Write a Python program to remove i'th element from a string.
+```{python}
+def remove_ith(my_str, i):
+""" i must be greater than 0 """
+	return my_str[:i-1] + my_str[i:]
+```
 
 Q88. Write a Python program to check if a substring is present in a given string.
+
+```{python}
+def check_substring(sub, my_str):
+	return sub_ in my_str
+```
 
 Q89. Write a Python program to find words which are greater than given length k.
 
