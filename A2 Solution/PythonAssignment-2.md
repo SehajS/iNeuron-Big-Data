@@ -626,11 +626,22 @@ Q94. Write a Python program to get all combinations of 2 tuples.
 Input : test_tuple1 = (7, 2), test_tuple2 = (7, 8)
 Output : [(7, 7), (7, 8), (2, 7), (2, 8), (7, 7), (7, 2), (8, 7), (8, 2)]
 ```
+```{python}
+def tuple_combinations(tuple_1, tuple_2):
+	result = [(i, j) for i in tuple_1 for j in tuple_2]
+	reverse = [(j, i) for i in tuple_1 for j in tuple_2]
+	return result + reverse
+```
 
 Q95. Write a Python program to sort a list of tuples by second item.
 ```
 Input : [('for', 24), ('Geeks', 8), ('Geeks', 30)] 
 Output : [('Geeks', 8), ('for', 24), ('Geeks', 30)]
+```
+```{python}
+def sort_list_of_tuples(list_a):
+	list_a.sort(key = lambda x: x[1])
+	return list_a
 ```
 
 Q96. Write a python program to print below pattern.
@@ -670,6 +681,11 @@ Q98. Write a python program to print below pattern.
   * * * 
  * * * * 
 * * * * * 
+```
+
+```{python}
+for i in range(1, 6):
+	print(" " * (5-i)//2 + "*" * i + " " * (5-i)//2)	
 ```
 
 Q99. Write a python program to print below pattern.
