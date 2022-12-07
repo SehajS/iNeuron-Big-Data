@@ -299,6 +299,8 @@ del mystr
 
 Q32. What is escape sequence?
 
+A32. A sequence of characters that when used inside a string are converted to another character or series of characters. For example, `\n` is a sequence character to indicatea new line in the string. 
+
 Q33. How can you print the below string?
 ```
 'iNeuron's Big Data Course'
@@ -322,7 +324,13 @@ courses = ['Data Science', 'Big Data', 'Data Analytics', 'Machine Learning']
 
 Q36. How can we access the elements in a list?
 
-A36. 
+A36.  The elements in the list are accessed by utilizing square brackets and passing the index of the element as shown below:
+
+```
+list_a = ['big data','power bi', 'machine learning']
+# to access 2nd element of the list one would use the following
+print(list_a[1])
+```
 
 Q37. Write a code to access the word "iNeuron" from the given list.
 ```
@@ -359,6 +367,8 @@ courses = ('Data Science', 'Big Data', 'Data Analytics', 'Machine Learning')
 
 Q42. Create a tuple and try to add your name in the tuple. Are you able to do it? Support your answer with reason.
 
+A42. It would not work since tuples are immuatable - i.e., once created, they cannot be changed.
+
 Q43. Can two tuple be appended. If yes, write a code for it. If not, why?
 
 Q44. Take a tuple as an input and print the count of elements in it.
@@ -367,8 +377,17 @@ Q45. What are sets in Python?
 
 Q46. How can you create a set?
 
-Q47. Create a set and add "iNeuron" in your set.
+A46. A set is created using curly braces as shown below:
 
+```{python}
+set_a = {'Data Science', 'Big Data', 'Data Analytics', 'Machine Learning'}
+```
+
+Q47. Create a set and add "iNeuron" in your set.
+```{python}
+set_a = {}
+set_a.add("iNeuron")
+```
 Q48. Try to add multiple values using add() function.
 
 Q49. How is update() different from add()?
@@ -381,9 +400,31 @@ Q52. How is frozen set different from set?
 
 Q53. What is union() in sets? Explain via code.
 
+A53. It creates a new set which contains all the elements of both the sets on which union is applied to. 
+
+```{python}
+set_a  = {1, 2, 3}
+set_b = {3, 5, 6}
+
+union_set = set_a.union(set_b)
+print(union_set)
+# {1, 2, 3, 5, 6}
+```
+
 Q54. What is intersection() in sets? Explain via code.
 
-Q55. What is dictionary ibn Python?
+A54. It creates a new set which contains only those elements that are present in both the sets.
+
+```{python}
+set_a  = {1, 2, 3}
+set_b = {3, 5, 6}
+
+intersection_set = set_a.intersection(set_b)
+print(intersection_set )
+# {3}
+```
+
+Q55. What is dictionary in Python?
 
 Q56. How is dictionary different from all other data structures.
 
@@ -395,11 +436,29 @@ var = {}
 print(type(var))
 ```
 
+A58.  The output will be `<class 'dict'>`.
+
 Q59. How can we add an element in a dictionary?
+
+
 
 Q60. Create a dictionary and access all the values in that dictionary.
 
+A60.
+```{python}
+sample_dict = {'a':1, 'b':2, 'c':3}
+for key, val in sample_dict.items():
+	print(key, val)
+```
+
 Q61. Create a nested dictionary and access all the element in the inner dictionary.
+
+A61.
+```{python}
+sample_dict = {'a':1, 'b':2, 'c': {'c1': 3, 'c2': 4}}
+for key, val in sample_dict['c'].items():
+	print(key, val)
+```
 
 Q62. What is the use of get() function?
 
@@ -422,6 +481,8 @@ Q70. What is the difference between for and while loops?
 Q71. What is the use of continue statement?
 
 Q72. What is the use of break statement?
+
+A72. The break statement allows for stopping execution of a loop if a particular condition is met.
 
 Q73. What is the use of pass statement?
 
