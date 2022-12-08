@@ -700,7 +700,7 @@ Q98. Write a python program to print below pattern.
 
 ```{python}
 for i in range(1, 6):
-	print(" " * (5-i)//2 + "*" * i + " " * (5-i)//2)	
+	print(" " * (5-i) + "* " * i)	
 ```
 
 Q99. Write a python program to print below pattern.
