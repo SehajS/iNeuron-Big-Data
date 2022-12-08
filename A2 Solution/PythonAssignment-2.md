@@ -371,9 +371,24 @@ A42. It would not work since tuples are immuatable - i.e., once created, they ca
 
 Q43. Can two tuple be appended. If yes, write a code for it. If not, why?
 
+A43. Yes, two tuples can be appended to create a new tuple as shown below:
+```
+tup_1 = (1, 2)
+tup_2 = (2, 3)
+print(tup_1 + tup_2) # results in (1, 2, 2, 3)
+```
+
 Q44. Take a tuple as an input and print the count of elements in it.
 
+```{python}
+from collections import Counter
+def get_counts(tuple_a):
+	return Counter(tuple_a)
+```
+
 Q45. What are sets in Python?
+
+A45. A data structure that allows for storing multiple unordered unique items.
 
 Q46. How can you create a set?
 
@@ -393,6 +408,8 @@ Q48. Try to add multiple values using add() function.
 Q49. How is update() different from add()?
 
 Q50. What is clear() in sets?
+
+A50. It turns a set into an empty set by removing all its elements.
 
 Q51. What is frozen set?
 
@@ -426,6 +443,8 @@ print(intersection_set )
 
 Q55. What is dictionary in Python?
 
+A55. A data structure that allows for storing key value pairs. Instead of indices as in the case with lists, keys are used to access the values in a dictionary.
+
 Q56. How is dictionary different from all other data structures.
 
 Q57. How can we delare a dictionary in Python?
@@ -440,7 +459,12 @@ A58.  The output will be `<class 'dict'>`.
 
 Q59. How can we add an element in a dictionary?
 
+A59. An element can be added in the dictionary by simply using square brackets as shown below:
 
+```{python}
+sample_dict = {'a':1, 'b':2, 'c':3}
+sample_dict['d'] = 4 # new element 'd' added
+```
 
 Q60. Create a dictionary and access all the values in that dictionary.
 
@@ -461,6 +485,13 @@ for key, val in sample_dict['c'].items():
 ```
 
 Q62. What is the use of get() function?
+
+A62. It is used to access the corresponding value of a key in the dictionary. Sample code is shown below:
+
+```{python}
+sample_dict = {'a':1, 'b':2, 'c': {'c1': 3, 'c2': 4}}
+print(sample_dict.get('a')) # will print 1
+```
 
 Q63. What is the use of items() function?
 
