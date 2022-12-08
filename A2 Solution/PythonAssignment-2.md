@@ -597,10 +597,25 @@ def check_substring(sub, my_str):
 ```
 
 Q89. Write a Python program to find words which are greater than given length k.
+```{python}
+def check_length(word, k):
+	return len(word) > k
+```
 
 Q90. Write a Python program to extract unquire dictionary values.
+```{python}
+from itertools import chain
+def get_unique_values(dict_1):
+	vals = [val for key, val in dict_1.items()]
+	chained = chain(*vals)
+	return set(chained)
+```
 
 Q91. Write a Python program to merge two dictionary.
+```{python}
+def merge_dicts(dict_1, dict_2):
+	return {**dict_1, **dict_2}
+```
 
 Q92. Write a Python program to convert a list of tuples into dictionary.
 ```
