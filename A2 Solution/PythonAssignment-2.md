@@ -353,9 +353,8 @@ lst.insert(3, "Big")
 ```
 
 Q40. What is a tuple? How is it different from list?
-```
-A tuple is data structure that allows for storage of multiple items. In contrast to lists, tuples are immutable.
-```
+
+A40.  A tuple is data structure that allows for storage of multiple items. In contrast to lists, tuples are immutable.
 
 Q41. How can you create a tuple in Python?
 
@@ -379,7 +378,7 @@ print(tup_1 + tup_2) # results in (1, 2, 2, 3)
 ```
 
 Q44. Take a tuple as an input and print the count of elements in it.
-
+A44.
 ```{python}
 from collections import Counter
 def get_counts(tuple_a):
@@ -399,6 +398,7 @@ set_a = {'Data Science', 'Big Data', 'Data Analytics', 'Machine Learning'}
 ```
 
 Q47. Create a set and add "iNeuron" in your set.
+A47.
 ```{python}
 set_a = {}
 set_a.add("iNeuron")
@@ -413,6 +413,7 @@ A50. It turns a set into an empty set by removing all its elements.
 
 Q51. What is frozen set?
 
+A51. A frozen set is similar to the set data structure 
 Q52. How is frozen set different from set?
 
 Q53. What is union() in sets? Explain via code.
@@ -448,6 +449,13 @@ A55. A data structure that allows for storing key value pairs. Instead of indice
 Q56. How is dictionary different from all other data structures.
 
 Q57. How can we delare a dictionary in Python?
+
+A57. An empty dictionary is created by just using opening and closing curly braces, while a non-empty dictionary is created by adding keys- value pairs within curly braces as shown below:
+
+```{python}
+empty_dict = {}
+sample_dict = {'a': 1, 'b': [2, 3], 'c': True}
+```
 
 Q58. What will the output of the following?
 ```
@@ -501,6 +509,8 @@ Q65. What is the use of popitems() function?
 
 Q66. What is the use of keys() function?
 
+A66. 
+
 Q67. What is the use of values() function?
 
 Q68. What are loops in Python?
@@ -524,7 +534,7 @@ Q75. How can you loop over a dictionary?
 
 ### Coding problems
 Q76. Write a Python program to find the factorial of a given number.
-
+A76.
 ```{python}
 def factorial(n):
 	if n == 0 or n == 1:
@@ -536,18 +546,20 @@ def factorial(n):
 ```
 
 Q77. Write a Python program to calculate the simple interest. Formula to calculate simple interest is SI = (P*R*T)/100
-
+A77.
 ```{python}
 def si(p,r,t):
 	return (p*r*t)/100
 ```
 
 Q78. Write a Python program to calculate the compound interest. Formula of compound interest is A = P(1+ R/100)^t.
+A78.
 ```{python}
 def compound_interest(p, r,t):
 	return p*(1+r/100)**t
 ```
 Q79. Write a Python program to check if a number is prime or not.
+A79.
 ```{python}
 import math
 def check_prime(n):
@@ -557,6 +569,7 @@ def check_prime(n):
 	return "Not Prime"
 ```
 Q80. Write a Python program to check Armstrong Number.
+A80.
 ```{python}
 def check_armstrong(num):
 	sum_of_cubes = 0
@@ -566,6 +579,7 @@ def check_armstrong(num):
 ```
 
 Q81. Write a Python program to find the n-th Fibonacci Number.
+A81.
 ```{python}
 def fib(n):
 	if n == 0 or n == 1:
@@ -576,12 +590,14 @@ def fib(n):
 	return fib_list[-1]
 ```
 Q82. Write a Python program to interchange the first and last element in a list.
+A82.
 ```{python}
 def interchange(list_a):
 	list_a[0], list_a[-1] = list_a[-1], list_a[0]
 	return list_a
 ```
 Q83. Write a Python program to swap two elements in a list.
+A83.
 ```
 def swap(list_a, x, y):
 """ x and y are the elements of list_a that are to be swaped """
@@ -592,6 +608,7 @@ def swap(list_a, x, y):
 	return list_a
 ```
 Q84. Write a Python program to find N largest element from a list.
+A84.
 ```{python}
 def largest_n(list_a, n):
     list_b = sorted(list_a)[::-1]
@@ -599,14 +616,14 @@ def largest_n(list_a, n):
 ```
 
 Q85. Write a Python program to find cumulative sum of a list.
-
+A85.
 ```{python}
 def get_cummulative(list_a):
     return [list_a[i] + sum(list_a[0:i]) for i in range(len(list_a))]
 ```
 
 Q86. Write a Python program to check if a string is palindrome or not.
-
+A86.
 ```{python}
 def check_palindrome(my_str):
 	reversed = my_str[::-1]
@@ -614,6 +631,7 @@ def check_palindrome(my_str):
 ```
 
 Q87. Write a Python program to remove i'th element from a string.
+A87.
 ```{python}
 def remove_ith(my_str, i):
 """ i must be greater than 0 """
@@ -621,19 +639,21 @@ def remove_ith(my_str, i):
 ```
 
 Q88. Write a Python program to check if a substring is present in a given string.
-
+A88.
 ```{python}
 def check_substring(sub, my_str):
 	return sub_ in my_str
 ```
 
 Q89. Write a Python program to find words which are greater than given length k.
+A89.
 ```{python}
 def check_length(word, k):
 	return len(word) > k
 ```
 
 Q90. Write a Python program to extract unquire dictionary values.
+A90.
 ```{python}
 from itertools import chain
 def get_unique_values(dict_1):
@@ -643,6 +663,7 @@ def get_unique_values(dict_1):
 ```
 
 Q91. Write a Python program to merge two dictionary.
+A91.
 ```{python}
 def merge_dicts(dict_1, dict_2):
 	return {**dict_1, **dict_2}
@@ -653,6 +674,7 @@ Q92. Write a Python program to convert a list of tuples into dictionary.
 Input : [('Sachin', 10), ('MSD', 7), ('Kohli', 18), ('Rohit', 45)]
 Output : {'Sachin': 10, 'MSD': 7, 'Kohli': 18, 'Rohit': 45}
 ```
+A92.
 ```{python}
 def tuple2dict(list_a):
 	return dict(list_a)
@@ -662,6 +684,7 @@ Q93. Write a Python program to create a list of tuples from given list having nu
 Input: list = [9, 5, 6]
 Output: [(9, 729), (5, 125), (6, 216)]
 ```
+A93.
 ```{python}
 def get_tuples(list_a):
 	return [(i, i**3) for i in list_a]
@@ -672,6 +695,7 @@ Q94. Write a Python program to get all combinations of 2 tuples.
 Input : test_tuple1 = (7, 2), test_tuple2 = (7, 8)
 Output : [(7, 7), (7, 8), (2, 7), (2, 8), (7, 7), (7, 2), (8, 7), (8, 2)]
 ```
+A94.
 ```{python}
 def tuple_combinations(tuple_1, tuple_2):
 	result = [(i, j) for i in tuple_1 for j in tuple_2]
@@ -684,6 +708,7 @@ Q95. Write a Python program to sort a list of tuples by second item.
 Input : [('for', 24), ('Geeks', 8), ('Geeks', 30)] 
 Output : [('Geeks', 8), ('for', 24), ('Geeks', 30)]
 ```
+A95.
 ```{python}
 def sort_list_of_tuples(list_a):
 	list_a.sort(key = lambda x: x[1])
@@ -698,7 +723,7 @@ Q96. Write a python program to print below pattern.
 * * * * 
 * * * * * 
 ```
-
+A96.
 ```{python}
 for i in range(1, 6):
 	print("* " * i)
@@ -713,6 +738,7 @@ Q97. Write a python program to print below pattern.
  ****
 *****
 ```
+A97.
 ```{python}
 for i in range(1, 6):
 	result = " " * (5-i)
@@ -728,7 +754,7 @@ Q98. Write a python program to print below pattern.
  * * * * 
 * * * * * 
 ```
-
+A98.
 ```{python}
 for i in range(1, 6):
 	print(" " * (5-i) + "* " * i)	
@@ -742,6 +768,7 @@ Q99. Write a python program to print below pattern.
 1 2 3 4 
 1 2 3 4 5
 ```
+A99. 
 ```{python}
 for i in range(1, 6):
 	print(*range(1, i+1))
@@ -754,6 +781,7 @@ C C C
 D D D D 
 E E E E E 
 ```
+A100.
 ```{python}
 characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 for i in range(1, 6):
