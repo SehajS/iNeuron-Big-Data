@@ -503,19 +503,42 @@ print(sample_dict.get('a')) # will print 1
 
 Q63. What is the use of items() function?
 
+A63. The items() function returns a list-like data structure (dict_items) where each element is a tuple of length 2. The first element of that tuple a key and the second value is its corresponding value. Since it returns a list-like data structure, it is used for iterating the dictionary. 
+
+```{python}
+sample_dict = {'a': 1, 'b': 2, 'c': [3, 4]}
+print(sample_dict.items()) # returns dict_items([('a', 1), ('b', 2), ('c', [3, 4])])
+```
+
 Q64. What is the use of pop() function?
 
 Q65. What is the use of popitems() function?
 
 Q66. What is the use of keys() function?
 
-A66. 
+A66. It results a list-like data structure (dict_keys) containing all the keys of a given dictionary as show below:
+```{python}
+sample_dict = {'a': 1, 'b': 2, 'c': [3, 4]}
+print(sample_dict.keys())        # returns dict_keys(['a', 'b', 'c'])
+print(type(sample_dict.keys()))  # returns <class 'dict_keys'>
+```
 
 Q67. What is the use of values() function?
 
+A67. It results a list-like data structure (dict_values) containing all the values of a given dictionary as show below:
+```{python}
+sample_dict = {'a': 1, 'b': 2, 'c': [3, 4]}
+print(sample_dict.values())        # returns dict_values([1, 2, [3, 4]])
+print(type(sample_dict.values()))  # returns <class 'dict_values'>
+```
+
 Q68. What are loops in Python?
 
+A68. Loops are used to iterate over a sequence/iterable and perform some operation over each iteration
+
 Q69. How many type of loop are there in Python?
+
+A69. There are two types of loops in Python - for loop and while loop.
 
 Q70. What is the difference between for and while loops?
 
