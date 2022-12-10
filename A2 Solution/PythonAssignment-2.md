@@ -566,13 +566,19 @@ A70. The biggest difference between a for loop and a while loop is that a for lo
 
 Q71. What is the use of continue statement?
 
+A71. The continue statement skips the execution of the remaining block of the code for the current iteration and forces the control to start next iteration. 
+
 Q72. What is the use of break statement?
 
 A72. The break statement allows for stopping execution of a loop if a particular condition is met.
 
 Q73. What is the use of pass statement?
 
+A73. A pass statement is used as a placeholder for future code.
+
 Q74. What is the use of range() function?
+
+A74. The range function is used to get a sequence of numbers. By default, it will will return a sequence of numbers starting from 0 to n-1 with incremenets of 1 where n is the parameter passed to the range function.
 
 Q75. How can you loop over a dictionary?
 
