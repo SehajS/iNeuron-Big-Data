@@ -428,11 +428,11 @@ A50. It turns a set into an empty set by removing all its elements.
 
 Q51. What is frozen set?
 
-A51. A frozen set is similar to the set data structure 
+A51. A frozen set is similar to the set data structure except that it is immutable - hence once created, its elements cannot be changed. 
 
 Q52. How is frozen set different from set?
 
-A52. 
+A52. Frozen set is immutable - thus, once created, its elements cannot be changed. This is in contrast with set where one can apply operations like add() to add more elements to the set. 
 
 Q53. What is union() in sets? Explain via code.
 
