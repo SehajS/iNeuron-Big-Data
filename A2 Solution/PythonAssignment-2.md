@@ -343,6 +343,17 @@ lst[-2][-1]
 
 Q38. Take a list as an input from the user and find the length of the list.
 
+A38.
+```{python}
+lst = input("Enter a list enclosed in square brackets: ")
+lst = lst.strip()
+lst = lst.replace("[", "")
+lst = lst.replace(",", "")
+lst = lst.replace("]", "")
+lst = lst.replace(" ", "")
+print(lst, len(lst))
+```
+
 Q39. Add the word "Big" in the 3rd index of the given list.
 ```
 lst = ["Welcome", "to", "Data", "course"]
