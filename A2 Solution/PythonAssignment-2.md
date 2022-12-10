@@ -405,7 +405,22 @@ set_a.add("iNeuron")
 ```
 Q48. Try to add multiple values using add() function.
 
+A48. It does not work because the add function only accepts one element as an arugment.
+
 Q49. How is update() different from add()?
+
+A49. The update method adds elements from one or more sets or iterables to the set which is calling that method as shown below:
+
+```{python}
+A = {1, 3, 5}
+B = [2, 5, 6] # an interable
+C = {0} # a set
+
+A.update(B, C)
+
+print(A)
+# returns {0, 1, 2, 3, 5, 6}
+```
 
 Q50. What is clear() in sets?
 
@@ -414,7 +429,10 @@ A50. It turns a set into an empty set by removing all its elements.
 Q51. What is frozen set?
 
 A51. A frozen set is similar to the set data structure 
+
 Q52. How is frozen set different from set?
+
+A52. 
 
 Q53. What is union() in sets? Explain via code.
 
@@ -447,6 +465,8 @@ Q55. What is dictionary in Python?
 A55. A data structure that allows for storing key value pairs. Instead of indices as in the case with lists, keys are used to access the values in a dictionary.
 
 Q56. How is dictionary different from all other data structures.
+
+A56.  A dictionary is a data structure used for storing a group of objects by using key-value pairs. Elements of the dictionary are only accessed through keys and are not accessed through regular indices as in with a list. The lookup time for an element in a dictionary is faster than that in a list because dictionary is a hashmap based data structure.
 
 Q57. How can we delare a dictionary in Python?
 
