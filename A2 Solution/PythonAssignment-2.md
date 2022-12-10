@@ -562,6 +562,8 @@ A69. There are two types of loops in Python - for loop and while loop.
 
 Q70. What is the difference between for and while loops?
 
+A70. The biggest difference between a for loop and a while loop is that a for loop is used when the number of iterations are known. On the other hand, a while loop is used when you want to iterate only until a condition is met. 
+
 Q71. What is the use of continue statement?
 
 Q72. What is the use of break statement?
@@ -573,6 +575,25 @@ Q73. What is the use of pass statement?
 Q74. What is the use of range() function?
 
 Q75. How can you loop over a dictionary?
+
+A75. One can loop over the dictionary either like a list wherein one iterates over the dictionary using its keys , or one can use   `items()` to iterate over the dictionary using both key as well as the corresponding value.
+
+```{python}
+sample_dict = {'a': 1, 'b': 2, 'c': [3, 4]}
+for key in sample_dict:
+	print(key)
+# returns 
+# a
+# b
+# c
+
+for key, val in sample_dict.items():
+	print(key, val)
+# returns
+# a 1
+# b 2
+# c [3, 4]
+```
 
 
 ### Coding problems
