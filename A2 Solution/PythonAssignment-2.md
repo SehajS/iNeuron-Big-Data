@@ -512,7 +512,27 @@ print(sample_dict.items()) # returns dict_items([('a', 1), ('b', 2), ('c', [3, 4
 
 Q64. What is the use of pop() function?
 
+A64. If used on a list, pop() removes the the item at index -1 from that list. If used on a dictionary, it takes in the key value and then removes it as well as its corresponding value from the dictionary. 
+
+```{python}
+lst = [1, 2, 3]
+lst.pop()
+print(lst) # returns [1, 2]
+
+dct = {'a': 1, 'b': 2, 'c': 3}
+dct.pop('a')
+print(dct) # returns {'b': 2, 'c': 3}
+```
+
 Q65. What is the use of popitems() function?
+
+A65. The popitem() function removes the key-value pair that was last inserted into the dictionary.
+
+```{python}
+dct = {'a': 1, 'b': 2, 'c': 3}
+dct.popitem()
+print(dct) # returns {'a': 1, 'b': 2}
+```
 
 Q66. What is the use of keys() function?
 
