@@ -144,6 +144,7 @@ corr_value = df['col_1'].corr(df['col_2'])
 
 Q20. How do you select specific columns in a DataFrame using their labels?
 
+
 Q21. How do you select specific rows in a DataFrame using their indexes?
 
 Q22. How do you sort a DataFrame by a specific column?
@@ -155,6 +156,13 @@ df = df.sort_values(by='col_name')
 ```
 
 Q23. How do you create a new column in a DataFrame based on the values of another column?
+
+A23. Pandas is built on top of NumPy and thus allows for vectorization of operations while creating new columns. All one has to do is to use [] to create a new column. All the operations are element-wise and there are no loops required. Below is an example:
+
+```{python}
+# create a new column the elements of whom are sum of other two columns 
+df['sum'] = df['col_1'] + df['col_2']
+```
 
 Q24. How do you remove duplicates from a DataFrame?
 
@@ -168,3 +176,5 @@ df = df.drop_duplicates(subset=list_of_cols)
 ```
 
 Q25. What is the difference between .loc and .iloc in Pandas?
+
+A25. The loc allows for selection of rows/columns of a Pandas DataFrame by their labels, while .iloc allows for selection of rows/columns of a Pandas DataFame by their integer indices. 
