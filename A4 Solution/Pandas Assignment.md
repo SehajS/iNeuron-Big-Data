@@ -137,6 +137,11 @@ std_val = df['col_name'].std()
 
 Q19. How do you calculate the correlation between two columns in a Pandas DataFrame?
 
+A19. In order to find correlation between two columns, `col_1` and `col_2` in a Pandas DataFrame `df`, one can utilize the `corr()` method as shown below:
+```{python}
+corr_value = df['col_1'].corr(df['col_2'])
+```
+
 Q20. How do you select specific columns in a DataFrame using their labels?
 
 Q21. How do you select specific rows in a DataFrame using their indexes?
@@ -152,5 +157,14 @@ df = df.sort_values(by='col_name')
 Q23. How do you create a new column in a DataFrame based on the values of another column?
 
 Q24. How do you remove duplicates from a DataFrame?
+
+A24. In order to remove duplicates from a Pandas DataFrame, one can utilize the `drop_duplicates()` function as shown below:
+```{python}
+# use this if you want to remove duplicates from all the columns
+df = df.drop_duplicates()
+
+# use this if you want to remove duplicates only from a subset of columns
+df = df.drop_duplicates(subset=list_of_cols)
+```
 
 Q25. What is the difference between .loc and .iloc in Pandas?
