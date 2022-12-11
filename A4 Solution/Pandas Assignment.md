@@ -16,6 +16,16 @@ df['col_name'].dtypes
 
 Q3. How do you select rows from a Pandas DataFrame based on a condition?
 
+A3. In order to select rows from a Pandas DataFrame that satisfy a certain condition, say having a column `cond_col` being equal to value `val`, one can use the following syntax:
+```{python}
+df = df[df['cond_col'] == val]
+```
+
+In general, the above syntax can be generalized to any logical expression. The generalized pseudocode is:
+```
+df = df[logical expression on df['cond_col']]
+```
+
 Q4. How do you rename columns in a Pandas DataFrame?
 
 A4. To rename a column `old_col_name` to the `new_col_name` in a Pandas DataFrame `df`, one can use `rename()` method as shown below:
