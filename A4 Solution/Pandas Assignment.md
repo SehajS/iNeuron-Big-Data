@@ -2,7 +2,17 @@
 
 Q1. How do you load a CSV file into a Pandas DataFrame?
 
+A1. One can read the csv file into a DataFrame using the following syntax
+```{python}
+df = pd.read_csv('filename.csv')
+```
+
 Q2. How do you check the data type of a column in a Pandas DataFrame?
+
+A2. For a column name `col_name` in the DataFrame `df`, the data type of the column can be checked using the following syntax
+```{python}
+df['col_name'].dtypes
+```
 
 Q3. How do you select rows from a Pandas DataFrame based on a condition?
 
