@@ -121,7 +121,19 @@ Q16. How do you filter rows of a Pandas DataFrame by multiple conditions?
 
 Q17. How do you calculate the mean of a column in a Pandas DataFrame?
 
+A17. One can use `.mean()` method to calcualte the mean of a column in a Pandas DataFrame as shown below:
+
+```{python}
+mean_val = df['col_name'].mean()
+```
+
 Q18. How do you calculate the standard deviation of a column in a Pandas DataFrame?
+
+A18. One can use `.std()` method to calcualte the standard deviation of a column in a Pandas DataFrame as shown below:
+
+```{python}
+std_val = df['col_name'].std()
+```
 
 Q19. How do you calculate the correlation between two columns in a Pandas DataFrame?
 
