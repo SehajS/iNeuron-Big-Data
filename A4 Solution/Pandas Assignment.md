@@ -61,10 +61,14 @@ df = df.fillna(0)
 
 Q9. How do you concatenate two Pandas DataFrames?
 
-A9. One can concat two Pandas DataFrames using `pd.concat()` function as shown below:
+A9. One can concat two Pandas DataFrames, `df1` and `df2`, using `pd.concat()` function as shown below:
 
 ```{python}
+# concatenating along rows
+df3 = pd.concat([df1, df2])
 
+# concatenating along columns
+df3 = pd.concat([df1, df2], axis=1)
 ```
 
 Q10. How do you merge two Pandas DataFrames on a specific column?
@@ -77,7 +81,11 @@ df = pd.merge(df1, df2, on='col_name', how='inner')
 
 Q11. How do you group data in a Pandas DataFrame by a specific column and apply an aggregation function?
 
-A11. 
+A11. To group the data by a column `group_col_name` and then to get an aggreation (say mean for demonstration purposes) by another column `agg_col_name`, one can utilize the following syntax:
+
+```{python}
+group_df = df.groupby('group_col_name').agg({'agg_col_name':np.mean})
+```
 
 Q12. How do you pivot a Pandas DataFrame?
 
