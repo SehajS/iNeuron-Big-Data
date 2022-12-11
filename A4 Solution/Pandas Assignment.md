@@ -20,7 +20,6 @@ A3. In order to select rows from a Pandas DataFrame that satisfy a certain condi
 ```{python}
 df = df[df['cond_col'] == val]
 ```
-
 In general, the above syntax can be generalized to any logical expression. The generalized pseudocode is:
 ```
 df = df[logical expression on df['cond_col']]
@@ -128,6 +127,12 @@ df_copy = df.copy()
 ```
 
 Q16. How do you filter rows of a Pandas DataFrame by multiple conditions?
+
+A16. To add multiple conditions, one can use similar syntax as provided in the answer for q3 and chain multiple conditions using `&`, `|` or `~` operator as deemed necessary. For example, say one wants to filter rows where `col_1` has value greater than `x` and `col_2` has value equal to `y`, then one would use the following syntax:
+
+```{python}
+df = df[(df['col_1'] > x) & (df['col_2'] == y)]
+```
 
 Q17. How do you calculate the mean of a column in a Pandas DataFrame?
 
