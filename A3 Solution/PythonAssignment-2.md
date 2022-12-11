@@ -58,11 +58,16 @@ Q24. What are the two most popular try statement variations?
 
 Q25. What is the purpose of the raise statement?
 
+A25. The raise keyword allows to raise an exception. The raise keyword raises an error and stops the control flow of the program. 
+
 Q26. What does the assert statement do, and what other statement is it like?
 
 Q27. What is the purpose of the with/as argument, and what other statement is it like?
 
 Q28. What are *args, **kwargs?
+
+A28. *args and **kwargs allow to pass multiple arugments to a function - *args allows
+passing of multiple non-keyword arguments and **kwargs allows to pass multiple keyword argument (key-value pairs).
 
 Q29. How can I pass optional or keyword parameters from one function to another?
 
@@ -71,6 +76,20 @@ Q30. What are Lambda Functions?
 A30. A lambda function is an anonymous function that can take in any number of arguments but can only return only one expression.
 
 Q31. Explain Inheritance in Python with an example?
+
+A31. Inheritance allows to define a class that inherits all the method and properties from another class. Say one has a parent class called Person and then one can create a child class Student as shown below:
+
+```{python}
+class Person:
+	def __init__(self, first_name, last_name):
+		self.first_name = first_name
+		self.last_name = last_name
+
+class Student(Person):
+	def __init__(self, first_name, last_name, major):
+		super().__init__(first_name, last_name)
+		self.major = major
+```
 
 Q32. Suppose class C inherits from classes A and B as class C(A,B).Classes A and B both have their own versions of method func(). If we call func() from an object of 
 class C, which version gets invoked?
