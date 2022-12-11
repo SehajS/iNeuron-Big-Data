@@ -144,8 +144,17 @@ corr_value = df['col_1'].corr(df['col_2'])
 
 Q20. How do you select specific columns in a DataFrame using their labels?
 
+A20. In order to select a list of columns, say `col_list` from a Pandas DataFrame, all one has to do is enclose them in square brackets as shown below:
+```{python}
+df[col_list]
+```
 
 Q21. How do you select specific rows in a DataFrame using their indexes?
+
+A21. Using iloc one can select specfic rows using their indexes. All one has to do is enclose the list of indexes, say `index_list` in square brackets as shown below:
+```{python}
+df.iloc[index_list]
+```
 
 Q22. How do you sort a DataFrame by a specific column?
 
