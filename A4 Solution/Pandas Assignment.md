@@ -22,6 +22,12 @@ A4.
 
 Q5. How do you drop columns in a Pandas DataFrame?
 
+A5. To drop a list of columns `drop_list` from a Pandas DataFrame `df`, one can the following syntax:
+
+```{python}
+df = df.drop(drop_list, axis=1)
+```
+
 Q6. How do you find the unique values in a column of a Pandas DataFrame?
 
 A6. There are two ways to find unique values in a column of Pandas DataFrame as shown below:
@@ -46,6 +52,12 @@ df.isnull().sum()
 ```
 
 Q8. How do you fill missing values in a Pandas DataFrame with a specific value?
+
+A8. To fill missing values in a Pandas DataFrame with a specific value (say 0 for demonstration purposes), one call use `fillna()` as shown below:
+
+```{python}
+df = df.fillna(0)
+```
 
 Q9. How do you concatenate two Pandas DataFrames?
 
