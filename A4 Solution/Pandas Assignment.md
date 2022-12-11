@@ -18,7 +18,10 @@ Q3. How do you select rows from a Pandas DataFrame based on a condition?
 
 Q4. How do you rename columns in a Pandas DataFrame?
 
-A4. 
+A4. To rename a column `old_col_name` to the `new_col_name` in a Pandas DataFrame `df`, one can use `rename()` method as shown below:
+```{python}
+df = df.rename(columns={'old_col_name': 'new_col_name'})
+```
 
 Q5. How do you drop columns in a Pandas DataFrame?
 
@@ -90,6 +93,13 @@ group_df = df.groupby('group_col_name').agg({'agg_col_name':np.mean})
 Q12. How do you pivot a Pandas DataFrame?
 
 Q13. How do you change the data type of a column in a Pandas DataFrame?
+
+A13. To change the data type of a column `col_name` in a Pandas DataFrame `df`, one can use the `astype()` method as shown below:
+
+```{python}
+# for demonstration purposes, one will convert it to str data type
+df['col_name'] = df['col_name'].astype(str)
+```
 
 Q14. How do you sort a Pandas DataFrame by a specific column?
 
