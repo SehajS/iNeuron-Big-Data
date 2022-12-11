@@ -73,7 +73,19 @@ Q13. How do you change the data type of a column in a Pandas DataFrame?
 
 Q14. How do you sort a Pandas DataFrame by a specific column?
 
+A14. To sort a Pandas DataFrame one can utilize `sort_values()` as shown below:
+
+```{python}
+df = df.sort_values(by='col_name')
+```
+
 Q15. How do you create a copy of a Pandas DataFrame?
+
+A15. One can use `copy()` method to create a copy of a Pandas DataFrame as shown below:
+
+```{python}
+df_copy = df.copy()
+```
 
 Q16. How do you filter rows of a Pandas DataFrame by multiple conditions?
 
@@ -88,6 +100,12 @@ Q20. How do you select specific columns in a DataFrame using their labels?
 Q21. How do you select specific rows in a DataFrame using their indexes?
 
 Q22. How do you sort a DataFrame by a specific column?
+
+A22. To sort a Pandas DataFrame one can utilize `sort_values()` as shown below:
+
+```{python}
+df = df.sort_values(by='col_name')
+```
 
 Q23. How do you create a new column in a DataFrame based on the values of another column?
 
