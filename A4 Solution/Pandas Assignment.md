@@ -101,6 +101,12 @@ group_df = df.groupby('group_col_name').agg({'agg_col_name':np.mean})
 
 Q12. How do you pivot a Pandas DataFrame?
 
+A12. In order to pivot a dataframe, one requires the name of the column to pivot it by (say `pivot_col`) which will act as the index of the pivoted dataframe, the list of columns of the pivoted dataframe (say `col_list`) and the list of columns that will be the values of the pivoted dataframe (say `values_list`). Then, one can use the following syntax:
+
+```
+pivoted_df = df.pivot(index=pivot_col, columns=col_list, values=values_list)
+```
+
 Q13. How do you change the data type of a column in a Pandas DataFrame?
 
 A13. To change the data type of a column `col_name` in a Pandas DataFrame `df`, one can use the `astype()` method as shown below:
